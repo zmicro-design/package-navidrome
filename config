@@ -4,3 +4,11 @@ export PACKAGE_CORE_NAME="navidrome"
 export PACKAGE_CORE_BIN_NAME="$PACKAGE_CORE_NAME"
 export PACKAGE_CORE_VERSION=v0.48.0
 export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/navidrome/navidrome/releases/download"
+
+export PACKAGE_CORE_ORG_DOREAMON_DESIGN="doreamon-design"
+export PACKAGE_CORE_VERSION_DOREAMON_DESIGN=v0.48-1.0.23
+
+if [ "$PLUGIN_PACKAGE_USE_DOREAMON_DESIGN" = "true" ]; then
+  export PACKAGE_CORE_RELEASE_DOWNLOAD="https://github.com/${PACKAGE_CORE_ORG_DOREAMON_DESIGN}/navidrome/releases/download"
+  export PACKAGE_CORE_VERSION=$PACKAGE_CORE_VERSION_DOREAMON_DESIGN
+fi
